@@ -25,6 +25,7 @@ public class test20210831 {
             f2=f;
             System.out.println("第"+i+"个月的兔子对数："+f2);
         }
+       
         /*
         for(int i =1 ; i<MONTH; i++){
             System.out.println("第"+i+"个月的兔子对数："+fib(i));
