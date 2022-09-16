@@ -85,8 +85,9 @@ public class ActivitiController {
     @PostMapping("start/{key}")
     public ResponseResult startProcess(@PathVariable(name = "key") String key){
         Map<String,Object> map = new HashMap<>();
-        map.put("assignee0","Jack");
-        map.put("assignee1","Marry");
+        map.put("user1","Jack");
+        map.put("user2","Marry");
+        map.put("user3","admin");
         ProcessInstance processInstance = runtimeService.startProcessInstanceByKey(key,map);
         ResponseResult result =ResponseResult.getSuccessResult(processInstance.getProcessDefinitionName());
         log.info("流程实例的内容：{}",processInstance);
