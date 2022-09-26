@@ -20,6 +20,7 @@ import java.util.List;
  * @Author : zhou sen nan
  * @Date : 2022/8/15  16:51
  */
+@Service
 public class MyUserDetailsService implements UserDetailsService {
 
     @Autowired
