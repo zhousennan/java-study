@@ -1,5 +1,6 @@
 package com.zsn.shiro.config;
 
+import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
 import org.apache.shiro.realm.Realm;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
 import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
@@ -20,7 +21,6 @@ public class ShiroConfig {
     public ShiroFilterFactoryBean getShiroFilterFactoryBean(DefaultWebSecurityManager securityManager){
         ShiroFilterFactoryBean bean = new ShiroFilterFactoryBean();
 
-
         bean.setSecurityManager(securityManager);
 
         /*添加过滤器
@@ -31,7 +31,7 @@ public class ShiroConfig {
          * role：拥有某个角色权限才能访问
          * */
         //创建一个map，map中决定哪些资源是受限的，哪些资源是公共的
-        HashMap<String, String> map = new HashMap<String, String>();
+        HashMap<String, String> map = new HashMap<>(16);
 
         //访问index.jsp需要认证
         //map.put("/index","authc");
@@ -60,6 +60,12 @@ public class ShiroConfig {
     @Bean(name = "realm")
     public Realm getRealm(){
         CustomerRealm customerRealm = new CustomerRealm();
+        //修改密码凭证校验匹配器
+        HashedCredentialsMatcher credentialsMatcher = new HashedCredentialsMatcher();
+        //设置加密算法为MD5
+        credentialsMatcher.setHashAlgorithmName("MD5");
+
+        customerRealm.setCredentialsMatcher(credentialsMatcher);
         return customerRealm;
     }
 }
