@@ -9,7 +9,6 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-
         <module>RabbitMQ</module>
         <module>algorithm-demo</module>
         <module>spring-activiti</module>
@@ -17,6 +16,17 @@
         <module>test-spring-security</module>
     </modules>
 
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>2.5.6</version>
+            </dependency>
+        </dependencies>
+
+    </dependencyManagement>
     <dependencies>
         <dependency>
             <groupId>org.apache.poi</groupId>
@@ -43,12 +53,7 @@
             <version>2.5.6</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.aspectj/com.springsource.org.aspectj.weaver -->
-        <!--        <dependency>-->
-        <!--            <groupId>org.aspectj</groupId>-->
-        <!--            <artifactId>com.springsource.org.aspectj.weaver</artifactId>-->
-        <!--            <version>1.6.4.RELEASE</version>-->
-        <!--        </dependency>-->
+
         <!-- https://mvnrepository.com/artifact/org.springframework/spring-aspects -->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -61,11 +66,6 @@
             <version>5.3.6</version>
         </dependency>
 
-        <!--disruptor-->
-        <dependency>
-            <groupId>com.lmax</groupId>
-            <artifactId>disruptor</artifactId>
-            <version>3.4.2</version>
-        </dependency>
+
     </dependencies>
 </project>
