@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/processdef">
-  <process id="myEvection" name="一个简易的出差流程" isExecutable="true">
-    <startEvent id="sid-3db67c8c-ac56-4d1e-9864-f17efb0cfa70"/>
-    <endEvent id="sid-8696c9e1-d59c-4cec-a57c-3ccc4729f5cf"/>
-    <userTask id="sid-bb97e606-0b54-4d96-b5e6-79ef046804f1" name="审批1" activiti:candidateGroups="activitiTeam"/>
-    <userTask id="sid-41c648f1-86ff-4d68-aa79-75bc81e4a389" name="审批2" activiti:candidateGroups="activitiTeam"/>
-    <sequenceFlow id="sid-ee1c3062-e82b-483e-ad34-6e191b0c99bf" sourceRef="sid-3db67c8c-ac56-4d1e-9864-f17efb0cfa70" targetRef="sid-bb97e606-0b54-4d96-b5e6-79ef046804f1"/>
-    <sequenceFlow id="sid-117771cf-7a19-4acb-83c2-2e9e3d067b4c" sourceRef="sid-bb97e606-0b54-4d96-b5e6-79ef046804f1" targetRef="sid-41c648f1-86ff-4d68-aa79-75bc81e4a389"/>
-    <sequenceFlow id="sid-058b01b8-40ed-4e25-a949-fc5f589fda52" sourceRef="sid-41c648f1-86ff-4d68-aa79-75bc81e4a389" targetRef="sid-8696c9e1-d59c-4cec-a57c-3ccc4729f5cf"/>
-  </process>
-  <bpmndi:BPMNDiagram id="BPMNDiagram_myEvection">
+<definitions xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath"
+             targetNamespace="http://www.activiti.org/processdef">
+    <process id="myEvection" name="一个简易的出差流程" isExecutable="true">
+        <startEvent id="sid-3db67c8c-ac56-4d1e-9864-f17efb0cfa70"/>
+        <endEvent id="sid-8696c9e1-d59c-4cec-a57c-3ccc4729f5cf"/>
+        <userTask id="sid-bb97e606-0b54-4d96-b5e6-79ef046804f1" name="审批1" activiti:candidateGroups="activitiTeam"/>
+        <userTask id="sid-41c648f1-86ff-4d68-aa79-75bc81e4a389" name="审批2" activiti:candidateGroups="activitiTeam"/>
+        <sequenceFlow id="sid-ee1c3062-e82b-483e-ad34-6e191b0c99bf" sourceRef="sid-3db67c8c-ac56-4d1e-9864-f17efb0cfa70"
+                      targetRef="sid-bb97e606-0b54-4d96-b5e6-79ef046804f1"/>
+        <sequenceFlow id="sid-117771cf-7a19-4acb-83c2-2e9e3d067b4c" sourceRef="sid-bb97e606-0b54-4d96-b5e6-79ef046804f1"
+                      targetRef="sid-41c648f1-86ff-4d68-aa79-75bc81e4a389"/>
+        <sequenceFlow id="sid-058b01b8-40ed-4e25-a949-fc5f589fda52" sourceRef="sid-41c648f1-86ff-4d68-aa79-75bc81e4a389"
+                      targetRef="sid-8696c9e1-d59c-4cec-a57c-3ccc4729f5cf"/>
+    </process>
+    <bpmndi:BPMNDiagram id="BPMNDiagram_myEvection">
     <bpmndi:BPMNPlane bpmnElement="myEvection" id="BPMNPlane_myEvection">
       <bpmndi:BPMNShape id="shape-47394f26-a042-4e16-9ba9-26c0af323016" bpmnElement="sid-3db67c8c-ac56-4d1e-9864-f17efb0cfa70">
         <omgdc:Bounds x="102.5" y="-40.0" width="30.0" height="30.0"/>

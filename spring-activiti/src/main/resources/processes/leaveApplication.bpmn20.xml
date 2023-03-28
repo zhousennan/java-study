@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/processdef">
-  <process id="leaveApplication" name="请假申请流程定义" isExecutable="true">
-    <startEvent id="sid-b1fbb7c8-8d20-4629-a575-5dd46b0d4a32"/>
-    <userTask id="sid-813f6940-24ec-43d1-9252-b42e30f00e77" name="创建申请" activiti:assignee="${assignee0}"/>
-    <userTask id="sid-794ff75d-4360-43a9-a893-36901cbcc070" name="审批申请" activiti:assignee="${assignee1}"/>
-    <sequenceFlow id="sid-e6334347-729a-4d3f-9db9-c32c7b593083" sourceRef="sid-b1fbb7c8-8d20-4629-a575-5dd46b0d4a32" targetRef="sid-813f6940-24ec-43d1-9252-b42e30f00e77"/>
-    <sequenceFlow id="sid-d5034d6c-65f7-4c4a-bd5a-243dd64aaf93" sourceRef="sid-813f6940-24ec-43d1-9252-b42e30f00e77" targetRef="sid-794ff75d-4360-43a9-a893-36901cbcc070"/>
-    <endEvent id="sid-d270fee3-2874-4f1d-8e4c-f09e73a8a63b"/>
-    <sequenceFlow id="sid-a5020b4e-5191-4cf7-a4a3-1a9e3e9e71aa" sourceRef="sid-794ff75d-4360-43a9-a893-36901cbcc070" targetRef="sid-d270fee3-2874-4f1d-8e4c-f09e73a8a63b"/>
-  </process>
-  <bpmndi:BPMNDiagram id="BPMNDiagram_leaveApplication">
+<definitions xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath"
+             targetNamespace="http://www.activiti.org/processdef">
+    <process id="leaveApplication" name="请假申请流程定义" isExecutable="true">
+        <startEvent id="sid-b1fbb7c8-8d20-4629-a575-5dd46b0d4a32"/>
+        <userTask id="sid-813f6940-24ec-43d1-9252-b42e30f00e77" name="创建申请" activiti:assignee="${assignee0}"/>
+        <userTask id="sid-794ff75d-4360-43a9-a893-36901cbcc070" name="审批申请" activiti:assignee="${assignee1}"/>
+        <sequenceFlow id="sid-e6334347-729a-4d3f-9db9-c32c7b593083" sourceRef="sid-b1fbb7c8-8d20-4629-a575-5dd46b0d4a32"
+                      targetRef="sid-813f6940-24ec-43d1-9252-b42e30f00e77"/>
+        <sequenceFlow id="sid-d5034d6c-65f7-4c4a-bd5a-243dd64aaf93" sourceRef="sid-813f6940-24ec-43d1-9252-b42e30f00e77"
+                      targetRef="sid-794ff75d-4360-43a9-a893-36901cbcc070"/>
+        <endEvent id="sid-d270fee3-2874-4f1d-8e4c-f09e73a8a63b"/>
+        <sequenceFlow id="sid-a5020b4e-5191-4cf7-a4a3-1a9e3e9e71aa" sourceRef="sid-794ff75d-4360-43a9-a893-36901cbcc070"
+                      targetRef="sid-d270fee3-2874-4f1d-8e4c-f09e73a8a63b"/>
+    </process>
+    <bpmndi:BPMNDiagram id="BPMNDiagram_leaveApplication">
     <bpmndi:BPMNPlane bpmnElement="leaveApplication" id="BPMNPlane_leaveApplication">
       <bpmndi:BPMNShape id="shape-3b7da665-ad50-4ccc-b44b-be1035abe471" bpmnElement="sid-b1fbb7c8-8d20-4629-a575-5dd46b0d4a32">
         <omgdc:Bounds x="67.5" y="35.0" width="30.0" height="30.0"/>

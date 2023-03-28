@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/processdef">
-  <process id="test" name="test" isExecutable="true">
-    <startEvent id="sid-60b95a9a-9a51-483f-ab3f-763c55a9d82b"/>
-    <userTask id="sid-29bc071c-6db8-4a1a-9f60-b960ed37f646" name="创建申请" activiti:assignee="${user1}"/>
-    <userTask id="sid-9788bb52-e26f-46a0-a9bf-a2964f504b14" name="小组长审批" activiti:assignee="${user2}"/>
-    <sequenceFlow id="sid-e0c350c8-01cc-495e-a4e7-90b2f5db1968" sourceRef="sid-60b95a9a-9a51-483f-ab3f-763c55a9d82b" targetRef="sid-29bc071c-6db8-4a1a-9f60-b960ed37f646"/>
-    <sequenceFlow id="sid-abc89743-f25e-4a70-a83f-7ba89ca59e7f" sourceRef="sid-29bc071c-6db8-4a1a-9f60-b960ed37f646" targetRef="sid-9788bb52-e26f-46a0-a9bf-a2964f504b14"/>
-    <userTask id="sid-4103b8f5-4e82-4c88-b68c-1c6bb0f6e7c0" name="主管审批" activiti:assignee="${user3}"/>
-    <sequenceFlow id="sid-03c62aac-0ad2-48b7-9796-252194990f40" sourceRef="sid-9788bb52-e26f-46a0-a9bf-a2964f504b14" targetRef="sid-4103b8f5-4e82-4c88-b68c-1c6bb0f6e7c0"/>
-    <endEvent id="sid-c1df8206-97e7-4b89-804f-24a0245c65d8"/>
-    <sequenceFlow id="sid-92349f7d-eb5e-40fb-8c47-4b401fe460c2" sourceRef="sid-4103b8f5-4e82-4c88-b68c-1c6bb0f6e7c0" targetRef="sid-c1df8206-97e7-4b89-804f-24a0245c65d8"/>
+<definitions xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath"
+             targetNamespace="http://www.activiti.org/processdef">
+    <process id="test" name="test" isExecutable="true">
+        <startEvent id="sid-60b95a9a-9a51-483f-ab3f-763c55a9d82b"/>
+        <userTask id="sid-29bc071c-6db8-4a1a-9f60-b960ed37f646" name="创建申请" activiti:assignee="${user1}"/>
+        <userTask id="sid-9788bb52-e26f-46a0-a9bf-a2964f504b14" name="小组长审批" activiti:assignee="${user2}"/>
+        <sequenceFlow id="sid-e0c350c8-01cc-495e-a4e7-90b2f5db1968" sourceRef="sid-60b95a9a-9a51-483f-ab3f-763c55a9d82b"
+                      targetRef="sid-29bc071c-6db8-4a1a-9f60-b960ed37f646"/>
+        <sequenceFlow id="sid-abc89743-f25e-4a70-a83f-7ba89ca59e7f" sourceRef="sid-29bc071c-6db8-4a1a-9f60-b960ed37f646"
+                      targetRef="sid-9788bb52-e26f-46a0-a9bf-a2964f504b14"/>
+        <userTask id="sid-4103b8f5-4e82-4c88-b68c-1c6bb0f6e7c0" name="主管审批" activiti:assignee="${user3}"/>
+        <sequenceFlow id="sid-03c62aac-0ad2-48b7-9796-252194990f40" sourceRef="sid-9788bb52-e26f-46a0-a9bf-a2964f504b14"
+                      targetRef="sid-4103b8f5-4e82-4c88-b68c-1c6bb0f6e7c0"/>
+        <endEvent id="sid-c1df8206-97e7-4b89-804f-24a0245c65d8"/>
+        <sequenceFlow id="sid-92349f7d-eb5e-40fb-8c47-4b401fe460c2" sourceRef="sid-4103b8f5-4e82-4c88-b68c-1c6bb0f6e7c0"
+                      targetRef="sid-c1df8206-97e7-4b89-804f-24a0245c65d8"/>
   </process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_test">
     <bpmndi:BPMNPlane bpmnElement="test" id="BPMNPlane_test">

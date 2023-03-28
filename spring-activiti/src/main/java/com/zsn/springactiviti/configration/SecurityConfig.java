@@ -1,4 +1,5 @@
 package com.zsn.springactiviti.configration;
+
 import com.zsn.springactiviti.entity.Permission;
 import com.zsn.springactiviti.reposity.PermissionMapper;
 import lombok.extern.slf4j.Slf4j;
@@ -12,7 +13,6 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
-import javax.annotation.Resource;
 import java.util.List;
 
 @Configuration

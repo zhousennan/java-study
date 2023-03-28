@@ -11,6 +11,10 @@
     <modules>
 
         <module>RabbitMQ</module>
+        <module>algorithm-demo</module>
+        <module>spring-activiti</module>
+        <module>spring-shiro</module>
+        <module>test-spring-security</module>
     </modules>
 
     <dependencies>
@@ -40,11 +44,11 @@
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.aspectj/com.springsource.org.aspectj.weaver -->
-        <dependency>
-            <groupId>org.aspectj</groupId>
-            <artifactId>com.springsource.org.aspectj.weaver</artifactId>
-            <version>1.6.4.RELEASE</version>
-        </dependency>
+        <!--        <dependency>-->
+        <!--            <groupId>org.aspectj</groupId>-->
+        <!--            <artifactId>com.springsource.org.aspectj.weaver</artifactId>-->
+        <!--            <version>1.6.4.RELEASE</version>-->
+        <!--        </dependency>-->
         <!-- https://mvnrepository.com/artifact/org.springframework/spring-aspects -->
         <dependency>
             <groupId>org.springframework</groupId>
