@@ -11,6 +11,7 @@
     <modules>
 
         <module>RabbitMQ</module>
+        <module>design-patterns-demo</module>
     </modules>
 
     <dependencies>
