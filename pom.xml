@@ -3,7 +3,12 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.7.0</version>
+        <relativePath/>
+    </parent>
     <groupId>org.example</groupId>
     <artifactId>java-study</artifactId>
     <packaging>pom</packaging>
@@ -12,7 +17,14 @@
 
         <module>RabbitMQ</module>
         <module>design-patterns-demo</module>
+        <module>spring-activiti</module>
+        <module>spring-shiro</module>
+        <module>test-spring-security</module>
+        <module>java-util</module>
     </modules>
+    <properties>
+        <mybatisplus.version>3.3.1</mybatisplus.version>
+    </properties>
 
     <dependencies>
         <dependency>
@@ -33,7 +45,11 @@
                 <version>1.7.21</version>
             </dependency>
         -->
-
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -63,6 +79,18 @@
             <groupId>com.lmax</groupId>
             <artifactId>disruptor</artifactId>
             <version>3.4.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>${mybatisplus.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.baomidou</groupId>
+                    <artifactId>mybatis-plus-generator</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
     </dependencies>
 </project>

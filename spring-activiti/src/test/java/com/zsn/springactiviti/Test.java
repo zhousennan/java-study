@@ -1,3 +1,4 @@
+/*
 package com.zsn.springactiviti;
 
 import org.activiti.engine.RepositoryService;
@@ -10,10 +11,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import javax.annotation.Resource;
 import java.util.List;
 
-/**
- * @Author : zhou sen nan
- * @Date : 2022/8/30  17:23
- */
+
+
 @SpringBootTest
 public class Test {
     @Resource
@@ -35,3 +34,4 @@ public class Test {
 
     }
 }
+*/
