@@ -10,8 +10,8 @@
     <groupId>com.kafka</groupId>
     <artifactId>kafka-canal</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>kafaka-cannal</name>
-    <description>kafaka-cannal</description>
+    <name>kafka-canal</name>
+    <description>kafka-canal</description>
     <properties>
         <java.version>1.8</java.version>
         <kafka_version>2.4.0</kafka_version>

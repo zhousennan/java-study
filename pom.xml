@@ -22,6 +22,7 @@
         <module>test-spring-security</module>
         <module>java-util</module>
         <module>kafka-canal</module>
+        <module>java-api</module>
     </modules>
     <properties>
         <mybatisplus.version>3.3.1</mybatisplus.version>

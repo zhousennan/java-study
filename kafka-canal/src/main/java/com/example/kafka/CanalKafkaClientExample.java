@@ -31,6 +31,8 @@ public class CanalKafkaClientExample {
         connector = new KafkaCanalConnector(servers, topic, partition, groupId, null, false);
     }
 
+
+
     public static void main(String[] args) {
         try {
             final CanalKafkaClientExample kafkaCanalClientExample = new CanalKafkaClientExample(
