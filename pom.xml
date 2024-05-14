@@ -21,12 +21,20 @@
         <module>spring-shiro</module>
         <module>test-spring-security</module>
         <module>java-util</module>
+        <module>kafka-canal</module>
     </modules>
     <properties>
         <mybatisplus.version>3.3.1</mybatisplus.version>
     </properties>
 
     <dependencies>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml</artifactId>
