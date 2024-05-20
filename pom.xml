@@ -23,6 +23,7 @@
         <module>java-util</module>
         <module>kafka-canal</module>
         <module>java-api</module>
+        <module>spring-sharding-jdbc</module>
     </modules>
     <properties>
         <mybatisplus.version>3.3.1</mybatisplus.version>
