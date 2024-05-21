@@ -1,4 +1,4 @@
-﻿package com.zsn.util;
+package com.zsn.util;
 
 
 import org.springframework.util.CollectionUtils;
