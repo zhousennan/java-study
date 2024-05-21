@@ -3,9 +3,7 @@ package com.sharding.jdbc.controller;
 import com.sharding.jdbc.pojo.User;
 import com.sharding.jdbc.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @Author: zsn
@@ -25,6 +23,14 @@ public class UserController {
     public User getUserById(@RequestParam("id") Long id) {
         return userService.getUserById(id);
     }
+
+
+    @PostMapping("save")
+    public void saveUser(@RequestBody User user){
+        userService.saveUser(user);
+        return;
+    }
+
 
 
 }

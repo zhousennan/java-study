@@ -11,4 +11,6 @@ import com.sharding.jdbc.pojo.User;
 public interface UserService {
 
     User getUserById(Long id);
+
+    Integer saveUser(User user);
 }

@@ -4,15 +4,11 @@ server:
 
 # 服务名
 spring:
-  application:
-    name: test-user
   datasource:
-    ds_1:
-      type: com.alibaba.druid.pool.DruidDataSource
-      url: jdbc:mysql://47.108.173.85:3306/test_sharding?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
-      username: root
-      password: 1439116557@zhouSE
-      driver-class-name: com.mysql.jdbc.Driver
+    # 指定 ShardingSphere 自定义驱动类
+    driver-class-name: org.apache.shardingsphere.driver.ShardingSphereDriver
+    # 指定 ShardingSphere 自定义配置文件路径地址
+    url: jdbc:shardingsphere:classpath:shardingsphere-config.yaml
 
 # 配置xml 的扫描路径
 mybatis:
@@ -23,21 +19,7 @@ mybatis:
     cacheEnabled: true
     mapUnderscoreToCamelCase: true
 
-rules:
-  tables:
-    user:
-      actualDataNodes: ds_1.user_$->{0..1}
-      tableStrategy:
-        standard:
-          shardingColumn: id
-          shardingAlgorithmName: user_inline   # 分片算法名称
-  # 分片算法配置
-  shardingAlgorithms:
 
-    user_inline:
-      type: INLINE
-      props:
-        algorithm-expression: user_$->{id % 2}
 
 
 

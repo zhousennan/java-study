@@ -1,7 +1,9 @@
 package com.sharding.jdbc.mapper;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.sharding.jdbc.pojo.User;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 /**
  * @Author: zsn
@@ -10,6 +12,8 @@ import org.apache.ibatis.annotations.Mapper;
  * @Version: 1.0
  */
 @Mapper
-public interface UserMapper {
+public interface UserMapper extends BaseMapper<User> {
     User getUserById(Long id);
+
+    void save(@Param("user") User user);
 }

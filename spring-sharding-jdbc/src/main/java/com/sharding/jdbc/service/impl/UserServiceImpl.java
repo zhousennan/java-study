@@ -24,4 +24,10 @@ public class UserServiceImpl implements UserService {
       User user =  userMapper.getUserById(id);
         return user;
     }
+
+    @Override
+    public Integer saveUser(User user) {
+        userMapper.save(user);
+        return null;
+    }
 }
