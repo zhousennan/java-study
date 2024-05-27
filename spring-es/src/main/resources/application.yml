@@ -1,0 +1,17 @@
+﻿spring:
+  elasticsearch:
+    rest:
+      sniff:
+        enabled: false # 是否启用节点嗅探，默认为false，开启会尝试发现集群中的其他节点
+      socket-timeout: 30000 # 连接超时时间（毫秒）
+      connect-timeout: 15000 # 连接超时时间（毫秒）
+      max-content-length: 100mb # 设置最大内容长度（字节）
+    uris: http://47.108.173.85:9200
+    username: elastic
+    password: 123456
+  properties:
+    path:
+      logs: ${LOGS_DIR:/mydata/elasticsearch/logs} # 日志文件路径
+      data: ${DATA_DIR:/mydata/elasticsearch/data} # 数据文件路径
+
+
