@@ -3,7 +3,7 @@ package com.zsn.strategyMode;
 /**
  * @Author: zsn
  * @Date: 2024/2/6 11:01
- * @Description: TODO Description of this class
+ * @Description: 策略模式
  * @Version: 1.0
  */
 public class StrategyPatternDemo {
