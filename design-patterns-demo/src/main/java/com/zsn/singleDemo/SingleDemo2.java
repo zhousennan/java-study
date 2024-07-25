@@ -13,7 +13,7 @@ public class SingleDemo2 {
 
     }
 
-    public SingleDemo2 getSingleDemo2() {
+    public static SingleDemo2 getSingleDemo2() {
 
         return singleDemo2;
 

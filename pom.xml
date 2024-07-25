@@ -25,6 +25,7 @@
         <module>java-api</module>
         <module>spring-sharding-jdbc</module>
         <module>spring-es</module>
+        <module>java-algorithm</module>
     </modules>
     <properties>
         <mybatisplus.version>3.3.1</mybatisplus.version>

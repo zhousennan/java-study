@@ -16,7 +16,7 @@ public class SingletonLazyDoubleCheck {
 
     public static SingletonLazyDoubleCheck getInstance() {
         if (singletonLazyDoubleCheck == null) {
-            synchronized (SingletonLazySimpleSync.class) {
+            synchronized (SingletonLazyDoubleCheck.class) {
                 if (singletonLazyDoubleCheck == null) {
                     singletonLazyDoubleCheck = new SingletonLazyDoubleCheck();
                 }
