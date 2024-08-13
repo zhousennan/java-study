@@ -1,0 +1,15 @@
+package com.zsn.proxyMode.dynamicProxy.cglibProxy;
+
+/**
+ * @Author: zsn
+ * @Date: 2024/8/7 10:59
+ * @Description: description of this class
+ * @Version: 1.0
+ */
+public class AliSmsService {
+
+    public String send(String message) {
+        System.out.println("send message:" + message);
+        return message;
+    }
+}

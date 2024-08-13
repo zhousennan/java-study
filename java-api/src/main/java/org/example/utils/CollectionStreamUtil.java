@@ -1,4 +1,4 @@
-package org.example.completableFuture;
+package org.example.utils;
 
 import org.example.future.User;
 import org.springframework.util.CollectionUtils;
